@@ -6,7 +6,7 @@
 
 }
 
-.inter {
+.Inter {
     font-family: 'Inter', sans-serif;
 }
 
@@ -108,6 +108,92 @@ nav>ul {
     border-bottom: 1px solid rgba(26, 110, 206, 0.1);
 }
 
+/* Collection */
+.collection {
+    margin: 0 190px;
+
+}
+
+.collection>h2 {
+    margin-bottom: 50px;
+    font-size: 1.75rem;
+    font-size: 600;
+    text-align: center;
+}
+
+.collection-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+}
+
+.card {
+    width: 329px;
+    height: 476px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.card-title {
+    color: var(--Text-Gray-900, #18191F);
+    font-size: 1.75rem;
+    font-weight: 500;
+    padding: 6px 0;
+}
+
+.card img {
+    width: 100%;
+}
+
+.price {
+    color: var(--Dark-Color, rgba(0, 0, 0, 0.87));
+    font-family: Inter;
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+.stars {
+    padding: 10px 0;
+}
+
+.stars>span {
+    color: var(--gray-80, #5E6366);
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card p {
+    color: var(--Gray-50, #787885);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.see-more {
+    display: flex;
+    justify-content: end;
+    color: rgba(224, 44, 109, 0.87);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 50px;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.see-more p {
+    padding-right: 15px;
+}
+
+.see-more svg {
+    padding-top: 5px;
+}
+
 /* Responsive */
 /* Mobile device */
 @media screen and (max-width: 576px) {
@@ -115,8 +201,13 @@ nav>ul {
         margin: 96px 20px;
     }
 
-    nav {
+    nav,
+    .collection,
+    .collection-content {
         flex-direction: column;
+    }
+
+    nav {
         padding-bottom: 20px;
     }
 
@@ -161,6 +252,16 @@ nav>ul {
         height: 30px;
     }
 
+    .collection {
+        margin: 15px;
+    }
+
+    .collection-content {
+        /* margin: 0 15px; */
+        padding: 0 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 
 
 
@@ -208,6 +309,16 @@ nav>ul {
         gap: 10px;
     }
 
+    .collection {
+        margin: 50px;
+    }
+
+    .collection-content {
+        gap: 20px;
+        padding: 0 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 
 }
